@@ -11,14 +11,15 @@ public class ContaTerminal {
         String agencia = scanner.next();
         System.out.println("Insira o número da conta:");
         int numeroConta = scanner.nextInt();
+        System.out.println("Qual o valor do depósito inicial?");
+        double saldo = scanner.nextDouble();
         scanner.close();
 
-        double saldo = 0;
-
         String finalMessage = "Olá " + nomeCliente 
-            + ", obrigado por criar uma conta em nosso banco, sua agência é "
-            + agencia + ", conta " + numeroConta + ", e seu saldo " + saldo
-            + " já está disponível para saque.";
+            + ", obrigado por criar uma conta em nosso banco. Sua agência é "
+            + agencia + ", conta "
+            + numeroConta + ", e seu saldo de R$"
+            + String.format("%.2f", saldo) + " já está disponível para saque.";
 
         System.out.println(finalMessage);
     }
